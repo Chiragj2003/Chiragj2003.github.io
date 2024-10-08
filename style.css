@@ -1,0 +1,473 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #101010;
+  --text-color: white;
+  --main-color: #648dd8;
+}
+
+/* Basic HTML Setup */
+html {
+  font-size: 50%; /* Adjusts base font size for responsiveness */
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Header Styles */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 2rem 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: var(--main-color);
+  display: none; /* Show with media query for mobile */
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+span {
+  background: linear-gradient(270deg, #df8088 10%, #0cc9ea 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+/* Gradient Button Styles */
+.gradient-btn {
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background: linear-gradient(270deg, #df8088 10%, #0cc9ea 100%);
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.gradient-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(270deg, #0cc9ea 10%, #80dfb8 100%);
+}
+
+/* Section Styles */
+section {
+  min-height: 100vh; /* Full height for sections */
+  padding: 10rem 15%;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  flex-direction: row; /* Change from column to row for side by side */
+  align-items: center; /* Center the content vertically */
+  gap: 3rem; /* Space between text and image */
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  text-align: left;
+  max-width: 60%; /* Limit text width */
+}
+
+.home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.home-content h3 {
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Image Styles */
+.home-img img {
+  width: 25vw; /* Adjusted for better scaling */
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.home-img img:hover {
+  transform: scale(1.05);
+}
+
+/* Social Icons Styling */
+.social-icons a {
+  font-size: 2rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: var(--main-color);
+}
+
+/* Button Group Styling */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta-buttons .btn {
+  font-size: 1.6rem;
+  padding: 1.2rem 2rem;
+  border-radius: 30px;
+  background: var(--main-color);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta-buttons .btn:hover {
+  background: #0cc9ea;
+}
+
+.about {
+  background-color: var(--bg-color);
+  padding: 5rem 15%;
+  color: white;
+}
+
+.education-list {
+  margin-top: 2rem;
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+}
+
+.education-list li {
+  font-size: 1.6rem; /* Adjust font size */
+  margin-bottom: 1rem; /* Space between items */
+}
+
+.education-list strong {
+  color: var(--main-color); /* Highlight the school names */
+}
+
+
+
+
+/* Services Section */
+.heading {
+  text-align: center;
+  font-size: 6rem;
+  margin: 2rem 0;
+}
+
+.services {
+  background-color: var(--bg-color);
+  color: black;
+}
+
+.services h2 {
+  color: var(--text-color);
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  gap: 2.5rem; /* Corrected gap */
+}
+
+.service-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 550px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: all 0.4s ease-in-out; /* Added units */
+}
+
+.service-box:hover {
+  background: var(--second-bg-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+
+.service-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 5rem;
+  align-items: center;
+}
+
+.service-info h4 {
+  font-size: 4rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.service-info p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* Projects Section */
+/* Projects Section */
+.projects {
+  background-color: var(--bg-color);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increase min width */
+  gap: 2.5rem; /* Increase the gap between cards */
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  height: 300px; /* Set a fixed height for consistency */
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%; /* Make the image fill the card */
+  object-fit: cover; /* Maintain aspect ratio */
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-card:hover .project-info {
+  opacity: 1; /* Show details on hover */
+}
+
+.project-info h4 {
+  font-size: 2.5rem; /* Increase title size */
+  margin-bottom: 1rem;
+}
+
+.project-info p {
+  font-size: 1.6rem; /* Increase description size */
+}
+.project-button {
+  background: var(--main-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  font-size: 1.4rem; /* Button font size */
+  margin-top: 1rem; /* Space above the button */
+  transition: background 0.3s ease-in-out;
+}
+
+.project-button:hover {
+  background: #0cc9ea; /* Change color on hover */
+}
+
+
+
+.contact {
+  background-color: var(--bg-color);
+  padding: 5rem 15%;
+  color: white;
+}
+
+.contact .form-group {
+  margin-bottom: 2rem;
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--second-bg-color);
+  color: white;
+  font-size: 1.6rem;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #ccc; /* Placeholder color */
+}
+
+.submit-btn {
+  background: var(--main-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #0cc9ea; /* Change color on hover */
+}
+
+
+
+.footer {
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+  padding: 2rem 15%;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2rem; /* Space between icons */
+}
+
+.social-icons a {
+  font-size: 2rem; /* Icon size */
+  color: var(--text-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: var(--main-color); /* Change color on hover */
+}
+
+
+.about h2,
+.services h2,
+.contact h2,
+.projects h2,
+.gradient-text {
+    background: linear-gradient(270deg, #7be9a0 10%, #0cc9ea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resume-btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  margin-top: 1rem; /* Space above the button */
+  border-radius: 30px;
+  background: var(--main-color);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  text-decoration: none; /* Remove underline */
+}
+
+.resume-btn:hover {
+  background: #0cc9ea; /* Change background on hover */
+}
+
+
